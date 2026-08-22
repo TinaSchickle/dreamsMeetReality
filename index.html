@@ -10,10 +10,8 @@
   html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
     background: #05060a;
-    overflow: hidden;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   }
   .collage {
     display: grid;
@@ -67,6 +65,131 @@
       border-radius: 4px 4px 14px 14px;
     }
   }
+
+  /* Manifestation section */
+  .manifestation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 1.25rem 5rem;
+  }
+  .manifest-badge {
+    color: #caa8ff;
+    background: rgba(180, 140, 255, 0.12);
+    border: 1px solid rgba(180, 140, 255, 0.35);
+    border-radius: 999px;
+    padding: 0.4rem 1.1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 1.75rem;
+  }
+  .phone-card {
+    width: 100%;
+    max-width: 400px;
+    background: #10131a;
+    border: 1px solid #232838;
+    border-radius: 22px;
+    padding: 1.5rem 1.25rem;
+    color: #e8eaf0;
+  }
+  .phone-card h2 {
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #cfd3de;
+    margin: 0 0 1.25rem;
+  }
+  .balance-box {
+    border: 1px solid #232838;
+    border-radius: 16px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .balance-box .iban-label {
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    color: #7b8093;
+  }
+  .balance-box .iban {
+    font-size: 0.95rem;
+    color: #b9bdca;
+    margin: 0.25rem 0 1rem;
+    letter-spacing: 0.05em;
+  }
+  .balance-box .balance-label {
+    color: #7b8093;
+    font-size: 0.85rem;
+  }
+  .balance-box .balance {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-top: 0.2rem;
+    color: #f5f6fa;
+  }
+  .txn-heading {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #cfd3de;
+    margin: 0 0 0.75rem;
+  }
+  .txn-list {
+    border: 1px solid #232838;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .txn {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid #1c2029;
+  }
+  .txn:last-child { border-bottom: none; }
+  .txn .icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #1c2029;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9aa0b4;
+    flex-shrink: 0;
+    font-size: 1rem;
+  }
+  .txn .details {
+    flex: 1;
+    min-width: 0;
+  }
+  .txn .name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #f0f1f5;
+  }
+  .txn .meta {
+    font-size: 0.78rem;
+    color: #7b8093;
+    margin-top: 0.1rem;
+  }
+  .txn .amount {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #7be0a8;
+    background: rgba(123, 224, 168, 0.12);
+    border-radius: 8px;
+    padding: 0.25rem 0.55rem;
+    white-space: nowrap;
+  }
+  .manifest-footer {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    color: #6b7086;
+    font-size: 0.78rem;
+    margin-top: 1.25rem;
+    line-height: 1.5;
+  }
 </style>
 </head>
 <body>
@@ -74,6 +197,65 @@
     <img class="main" src="assets/photo1.jpg" alt="Tiny Houses im Bambusgarten">
     <img class="top-right" src="assets/photo3.jpg" alt="Feuerstelle mit Picknicktischen zwischen den Tiny Houses">
     <img class="bottom-right" src="assets/photo2.jpg" alt="Feuerstelle mit Sauna und Loungebereich">
+  </div>
+
+  <div class="manifestation">
+    <div class="manifest-badge">✨ Manifestation — kein echtes Konto</div>
+    <div class="phone-card">
+      <h2>Girokonto</h2>
+      <div class="balance-box">
+        <div class="iban-label">IBAN</div>
+        <div class="iban">DE•• •••• •••• •••• ••••</div>
+        <div class="balance-label">Kontostand</div>
+        <div class="balance">€500.000,00</div>
+      </div>
+      <div class="txn-heading">Letzte Eingänge</div>
+      <div class="txn-list">
+        <div class="txn">
+          <div class="icon">↙</div>
+          <div class="details">
+            <div class="name">Tina Schickle</div>
+            <div class="meta">Miete</div>
+          </div>
+          <div class="amount">+€700,00</div>
+        </div>
+        <div class="txn">
+          <div class="icon">↙</div>
+          <div class="details">
+            <div class="name">Tina Schickle</div>
+            <div class="meta">Miete</div>
+          </div>
+          <div class="amount">+€700,00</div>
+        </div>
+        <div class="txn">
+          <div class="icon">↙</div>
+          <div class="details">
+            <div class="name">Tina Schickle</div>
+            <div class="meta">Miete</div>
+          </div>
+          <div class="amount">+€700,00</div>
+        </div>
+        <div class="txn">
+          <div class="icon">↙</div>
+          <div class="details">
+            <div class="name">Tina Schickle</div>
+            <div class="meta">Miete</div>
+          </div>
+          <div class="amount">+€700,00</div>
+        </div>
+        <div class="txn">
+          <div class="icon">↙</div>
+          <div class="details">
+            <div class="name">Tina Schickle</div>
+            <div class="meta">Miete</div>
+          </div>
+          <div class="amount">+€700,00</div>
+        </div>
+      </div>
+    </div>
+    <div class="manifest-footer">
+      Visualisierung eines Ziels, keine echten Kontodaten. Alle Zahlen sind frei erfunden.
+    </div>
   </div>
 </body>
 </html>
