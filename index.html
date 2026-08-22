@@ -10,8 +10,11 @@
   html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
     background: #05060a;
     font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    overflow: hidden;
   }
   .collage {
     display: grid;
@@ -66,12 +69,30 @@
     }
   }
 
-  /* Manifestation section */
+  /* Manifestation overlay, centered over the collage */
   .manifestation {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem 1.25rem 5rem;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+  .manifest-panel {
+    background: rgba(5, 6, 10, 0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 26px;
+    padding: 1.75rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
   }
   .manifest-badge {
     color: #caa8ff;
@@ -85,12 +106,13 @@
   }
   .phone-card {
     width: 100%;
-    max-width: 400px;
+    max-width: 360px;
     background: #10131a;
     border: 1px solid #232838;
     border-radius: 22px;
     padding: 1.5rem 1.25rem;
     color: #e8eaf0;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.45);
   }
   .phone-card h2 {
     text-align: center;
@@ -200,6 +222,7 @@
   </div>
 
   <div class="manifestation">
+   <div class="manifest-panel">
     <div class="manifest-badge">✨ Manifestation — kein echtes Konto</div>
     <div class="phone-card">
       <h2>Girokonto</h2>
@@ -256,6 +279,7 @@
     <div class="manifest-footer">
       Visualisierung eines Ziels, keine echten Kontodaten. Alle Zahlen sind frei erfunden.
     </div>
+   </div>
   </div>
 </body>
 </html>
